@@ -1,0 +1,1 @@
+{"unsnapped": ["way/3"], "pairs": [{"from": "way/1", "to": "way/2", "meters": 109.9, "route": "network"}, {"from": "way/1", "to": "way/4", "meters": 403.1, "route": "network"}, {"from": "way/2", "to": "way/4", "meters": 293.2, "route": "network"}], "note": "meters = graph path length plus snap distance at both ends. null = no connected pedestrian route."}

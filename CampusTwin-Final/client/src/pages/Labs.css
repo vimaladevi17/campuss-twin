@@ -1,0 +1,135 @@
+.labs-page {
+  min-height: 100vh;
+  padding: 120px 50px 60px;
+  background: #f5f7fb;
+}
+
+/* Header */
+.labs-page h1 {
+  text-align: center;
+  color: #222;
+  font-size: 36px;
+  margin: 0 0 40px;
+}
+
+.labs-page h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0b5ed7;
+  margin: 12px auto 0;
+  border-radius: 5px;
+}
+
+/* Lab Grid */
+.labs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Lab Card */
+.lab-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lab-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+.lab-card h2 {
+  color: #0b5ed7;
+  font-size: 21px;
+  margin: 0 0 18px;
+}
+
+.lab-card p {
+  margin: 10px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.lab-card strong {
+  color: #333;
+}
+
+/* Status */
+.lab-card .available,
+.lab-card .occupied,
+.lab-card .unavailable,
+.lab-card .maintenance {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.lab-card .available {
+  color: #15803d;
+  background: #dcfce7;
+  font-weight: 600;
+}
+
+.lab-card .occupied {
+  color: #c2410c;
+  background: #ffedd5;
+  font-weight: 600;
+}
+
+.lab-card .maintenance {
+  color: #6d28d9;
+  background: #ede9fe;
+  font-weight: 600;
+}
+
+.lab-card .unavailable {
+  color: #b91c1c;
+  background: #fee2e2;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .labs-page {
+    padding: 110px 30px 50px;
+  }
+
+  .labs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .labs-page {
+    padding: 100px 20px 40px;
+  }
+
+  .labs-page h1 {
+    font-size: 30px;
+  }
+
+  .labs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.labs-message {
+  text-align: center;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.labs-error {
+  color: #b42318;
+  font-weight: 600;
+}

@@ -1,0 +1,132 @@
+.events-page {
+  min-height: 100vh;
+  padding: 120px 50px 60px;
+  background: #f5f7fb;
+}
+
+/* Header */
+.events-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.events-header p {
+  color: #0b5ed7;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.events-header h1 {
+  color: #222;
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.events-header span {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Events Grid */
+.events-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Event Card */
+.event-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+/* Category */
+.event-category {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eef4ff;
+  color: #0b5ed7;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.event-card h2 {
+  color: #222;
+  font-size: 21px;
+  margin: 0 0 18px;
+}
+
+/* Event Information */
+.event-info {
+  display: grid;
+  gap: 10px;
+}
+
+.event-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Description */
+.event-description {
+  margin-top: 18px !important;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  color: #777 !important;
+  line-height: 1.6 !important;
+}
+
+/* Loading / Error / Empty */
+.events-message {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  color: #666;
+}
+
+.events-error {
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .events-page {
+    padding: 110px 30px 50px;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .events-page {
+    padding: 100px 20px 40px;
+  }
+
+  .events-header h1 {
+    font-size: 30px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

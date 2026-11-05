@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-03T07:40:36.853650+00:00",
+  "source": "synthetic test fixture (not real OSM data)",
+  "provenance_label": "OSM-derived",
+  "crs": "EPSG:4326",
+  "reference_point": {
+    "lat": 9.5743,
+    "lon": 77.6761,
+    "radius_m": 1500
+  },
+  "verification_statement": "OSM data is community-contributed and has NOT been verified by the college.",
+  "files": {
+    "buildings.geojson": {
+      "features": 4,
+      "idField": "osm_id"
+    },
+    "building_centroids.geojson": {
+      "features": 4,
+      "idField": "osm_id"
+    },
+    "facilities.geojson": {
+      "features": 5,
+      "idField": "osm_id"
+    },
+    "pedestrian_paths.geojson": {
+      "features": 2,
+      "idField": "osm_id"
+    },
+    "pedestrian_network.geojson": {
+      "features": 2,
+      "idField": "osm_id"
+    }
+  },
+  "walking_distances": {
+    "file": "walking_distances.json",
+    "pairs": 3
+  }
+}

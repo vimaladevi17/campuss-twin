@@ -1,0 +1,44 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seed.js",
+    "seed:demo": "node seed.js --demo",
+    "test": "node --test tests/unit/*.test.js tests/api.test.js tests/contract.test.js tests/socket.test.js && node tests/smoke.js",
+    "test:unit": "node --test tests/unit/*.test.js",
+    "test:api": "node --test tests/api.test.js",
+    "migrate": "node scripts/migrateLegacy.js",
+    "migrate:dry": "node scripts/migrateLegacy.js --dry-run",
+    "import:facilities": "node scripts/importFacilities.js",
+    "seed:twin-demo": "node scripts/seedTwinDemo.js",
+    "import:gis": "node scripts/importGis.js",
+    "validate:startup": "node scripts/validateStartup.js",
+    "reset:admin": "node scripts/resetAdmin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.2",
+    "multer": "^2.5.0",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "socket.io-client": "^4.8.4",
+    "supertest": "^7.3.1"
+  }
+}

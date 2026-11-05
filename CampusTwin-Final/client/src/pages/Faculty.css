@@ -1,0 +1,179 @@
+.faculty-page {
+  min-height: 100vh;
+  padding: 120px 50px 60px;
+  background: #f5f7fb;
+}
+
+/* Header */
+.faculty-page h1 {
+  text-align: center;
+  color: #222;
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.faculty-page h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0b5ed7;
+  margin: 12px auto 30px;
+  border-radius: 5px;
+}
+
+/* Search */
+.faculty-page input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  margin: 0 auto 40px;
+  padding: 14px 18px;
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faculty-page input::placeholder {
+  color: #999;
+}
+
+.faculty-page input:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+/* Faculty Grid */
+.faculty-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Faculty Card */
+.faculty-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+.faculty-card h2 {
+  color: #0b5ed7;
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+
+.faculty-card p {
+  margin: 10px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.faculty-card strong {
+  color: #333;
+}
+
+/* Empty Search Result */
+.faculty-grid:empty::after {
+  content: "No faculty members found.";
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .faculty-page {
+    padding: 110px 30px 50px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .faculty-page {
+    padding: 100px 20px 40px;
+  }
+
+  .faculty-page h1 {
+    font-size: 30px;
+  }
+
+  .faculty-page input {
+    max-width: 100%;
+  }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Search and department filter */
+.faculty-filters {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.faculty-filters input {
+  flex: 1 1 260px;
+  max-width: none;
+  margin: 0;
+}
+
+.faculty-filters select {
+  flex: 0 1 220px;
+  padding: 14px 16px;
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  font-size: 15px;
+}
+
+.faculty-message {
+  text-align: center;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.faculty-error {
+  color: #b42318;
+  font-weight: 600;
+}
+
+.faculty-photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .faculty-page {
+    padding: 110px 20px 50px;
+  }
+}

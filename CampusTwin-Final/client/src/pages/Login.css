@@ -1,0 +1,137 @@
+.login-page {
+  min-height: 100vh;
+  padding: 100px 20px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef4ff, #f8fafc);
+}
+
+/* Login Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Heading */
+.login-card h1 {
+  color: #0b5ed7;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.login-card p {
+  color: #666;
+  margin: 0 0 28px;
+}
+
+/* Form Controls */
+.login-card select,
+.login-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  margin: 8px 0;
+  border: 1px solid #d9dee8;
+  border-radius: 9px;
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card select:focus,
+.login-card input:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+.login-card input::placeholder {
+  color: #999;
+}
+
+/* Login Button */
+.login-card button {
+  width: 100%;
+  padding: 13px 15px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 9px;
+  background: #0b5ed7;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-card button:hover {
+  background: #084298;
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .login-page {
+    padding: 90px 20px 40px;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+  }
+
+  .login-card h1 {
+    font-size: 28px;
+  }
+}
+
+/* Messages and mode switch */
+.login-error,
+.login-success {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.login-error {
+  background: #fdecea;
+  color: #b42318;
+  border: 1px solid #f5c2c0;
+}
+
+.login-success {
+  background: #e7f6ec;
+  color: #1a7f37;
+  border: 1px solid #b7e1c4;
+}
+
+.login-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-card .login-switch {
+  margin-top: 12px;
+  background: transparent;
+  color: #0b5ed7;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-card .login-switch:hover {
+  background: #eef4ff;
+  transform: none;
+}

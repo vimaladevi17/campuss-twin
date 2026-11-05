@@ -1,0 +1,33 @@
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:60px 30px;
+    background:#f5f7fa;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    padding:30px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#0b5ed7;
+    font-size:40px;
+}
+
+.card p{
+    margin-top:10px;
+    font-size:18px;
+    color:#555;
+}

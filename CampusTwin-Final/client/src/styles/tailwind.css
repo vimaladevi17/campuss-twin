@@ -1,0 +1,36 @@
+/* Tailwind WITHOUT its global reset ("preflight"), so the existing page stylesheets keep looking the same.
+   New CampusTwin screens use the utility classes below and the design tokens. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --ct-bg: #f4f6fb; --ct-surface: #ffffff; --ct-surface-2: #eef2f8; --ct-border: #dbe2ee;
+  --ct-text: #0f172a; --ct-muted: #5b6b86; --ct-brand: #1d4ed8; --ct-brand-soft: #dbe7ff;
+  --ct-ok: #16a34a; --ct-bad: #dc2626; --ct-busy: #ea580c; --ct-maint: #7c3aed; --ct-sel: #2563eb;
+}
+.dark {
+  --ct-bg: #0b1220; --ct-surface: #111a2e; --ct-surface-2: #17223b; --ct-border: #24324f;
+  --ct-text: #e6ecf8; --ct-muted: #93a4c3; --ct-brand: #6ea0ff; --ct-brand-soft: #1b2b52;
+}
+@theme inline {
+  --color-bg: var(--ct-bg); --color-surface: var(--ct-surface); --color-surface2: var(--ct-surface-2);
+  --color-line: var(--ct-border); --color-ink: var(--ct-text); --color-muted: var(--ct-muted);
+  --color-brand: var(--ct-brand); --color-brandsoft: var(--ct-brand-soft);
+  --color-ok: var(--ct-ok); --color-bad: var(--ct-bad); --color-busy: var(--ct-busy); --color-maint: var(--ct-maint); --color-sel: var(--ct-sel);
+}
+
+/* Base styles apply ONLY to new CampusTwin screens (.ct-new) and the shell, never to the pre-existing pages. */
+.ct-app { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ct-text); background: var(--ct-bg); }
+.ct-sidebar, .ct-sidebar *, .ct-topbar, .ct-topbar *, .ct-new, .ct-new * { box-sizing: border-box; }
+.ct-new { max-width: 1400px; margin: 0 auto; }
+.ct-new :where(button) { font: inherit; cursor: pointer; }
+.ct-new :where(h1, h2, h3, p) { margin-block: 0; }
+.ct-new :where(input, select, textarea) { font: inherit; color: var(--ct-text); background: var(--ct-surface); border: 1px solid var(--ct-border); border-radius: 8px; padding: 8px 10px; max-width: 100%; }
+.ct-new :where(input, select, textarea):focus { outline: 2px solid var(--ct-brand); outline-offset: 0; }
+.ct-new :where(table) { border-collapse: collapse; width: 100%; }
+.ct-new :where(th) { text-align: left; font-weight: 600; color: var(--ct-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
+.ct-new :where(th, td) { padding: 8px 10px; border-bottom: 1px solid var(--ct-border); vertical-align: top; }
+.ct-new :where(a) { color: var(--ct-brand); }

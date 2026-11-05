@@ -1,0 +1,67 @@
+.quick-access{
+
+    padding:70px 50px;
+
+    background:#ffffff;
+
+}
+
+.quick-access h2{
+
+    text-align:center;
+
+    color:#0B5ED7;
+
+    margin-bottom:40px;
+
+    font-size:36px;
+
+}
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.quick-card{
+
+    text-decoration:none;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    color:#333;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.quick-card:hover{
+
+    transform:translateY(-10px);
+
+    background:#0B5ED7;
+
+    color:white;
+
+}
+
+.quick-card h1{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}

@@ -1,0 +1,15 @@
+{
+  "name": "campustwin-final",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server start",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "test:server": "npm --prefix server test",
+    "test:client": "npm --prefix client test",
+    "test:gis": "python -m pytest gis -q",
+    "validate:startup": "npm --prefix server run validate:startup"
+  }
+}

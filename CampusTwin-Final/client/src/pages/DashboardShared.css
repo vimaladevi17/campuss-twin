@@ -1,0 +1,149 @@
+/* Tables, bars and small helpers shared by the three dashboards */
+.dash-table-wrap {
+  overflow-x: auto;
+}
+
+.dash-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+
+.dash-table th,
+.dash-table td {
+  padding: 10px 8px;
+  text-align: left;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 14px;
+  color: #333;
+}
+
+.dash-table th {
+  color: #666;
+  font-size: 13px;
+  background: #f8f9fc;
+}
+
+.dash-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dash-pill.good {
+  background: #e7f6ec;
+  color: #1a7f37;
+}
+
+.dash-pill.low {
+  background: #fdecea;
+  color: #b42318;
+}
+
+.dash-note {
+  color: #666;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.dash-error {
+  color: #b42318;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.dash-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0b5ed7;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.dash-notice-meta {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* Faculty attendance form */
+.attendance-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.attendance-form select,
+.attendance-form input {
+  flex: 1 1 200px;
+  padding: 11px 13px;
+  border: 1px solid #d9dee8;
+  border-radius: 9px;
+  background: white;
+  font-size: 15px;
+}
+
+.attendance-form button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.attendance-form button.present {
+  background: #198754;
+}
+
+.attendance-form button.absent {
+  background: #dc3545;
+}
+
+.attendance-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.attendance-ok {
+  color: #1a7f37;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+/* Admin dashboard extras */
+.admin-chart-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.admin-chart-row span:first-child {
+  width: 90px;
+  flex-shrink: 0;
+}
+
+.admin-chart-bar {
+  flex: 1;
+  height: 14px;
+  background: #edf0f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-chart-bar div {
+  height: 100%;
+  background: #0b5ed7;
+  border-radius: 8px;
+}

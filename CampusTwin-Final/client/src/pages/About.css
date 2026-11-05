@@ -1,0 +1,128 @@
+.about-page {
+  min-height: 100vh;
+  padding: 120px 50px 60px;
+  background: #f5f7fb;
+}
+
+/* Header */
+.about-header {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.about-header p {
+  color: #0b5ed7;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.about-header h1 {
+  color: #222;
+  font-size: 38px;
+  margin: 0 0 15px;
+}
+
+.about-header span {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Main Content */
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Cards */
+.about-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.about-card h2 {
+  color: #222;
+  margin: 0 0 15px;
+}
+
+.about-card p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Feature List */
+.about-features {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f5f8ff;
+  border-radius: 9px;
+  color: #444;
+}
+
+.about-feature span {
+  font-size: 22px;
+}
+
+/* Full Width Section */
+.about-mission {
+  max-width: 1100px;
+  margin: 25px auto 0;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.about-mission h2 {
+  color: #222;
+  margin: 0 0 15px;
+}
+
+.about-mission p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .about-page {
+    padding: 110px 30px 50px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page {
+    padding: 100px 20px 40px;
+  }
+
+  .about-header h1 {
+    font-size: 30px;
+  }
+
+  .about-card,
+  .about-mission {
+    padding: 22px;
+  }
+}

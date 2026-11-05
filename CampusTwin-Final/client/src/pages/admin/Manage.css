@@ -1,0 +1,279 @@
+.manage-page {
+  min-height: 100vh;
+  padding: 110px 40px 60px;
+  background: #f5f7fb;
+}
+
+.manage-page h1 {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  color: #222;
+  font-size: 30px;
+}
+
+.manage-tabs {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.manage-tabs a {
+  padding: 8px 16px;
+  border: 1px solid #d9dee8;
+  border-radius: 20px;
+  background: white;
+  color: #444;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.manage-tabs a.active {
+  background: #0b5ed7;
+  border-color: #0b5ed7;
+  color: white;
+}
+
+.manage-alert {
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.manage-success {
+  background: #e7f6ec;
+  color: #1a7f37;
+}
+
+.manage-error {
+  background: #fdecea;
+  color: #b42318;
+}
+
+.manage-form,
+.manage-list {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.manage-form h2,
+.manage-list h2 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.manage-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.manage-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.manage-field.wide {
+  grid-column: 1 / -1;
+}
+
+.manage-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.manage-field small {
+  color: #777;
+}
+
+.manage-field input,
+.manage-field select,
+.manage-field textarea,
+.manage-list-head input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d9dee8;
+  border-radius: 9px;
+  background: white;
+  color: #333;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.manage-field input:focus,
+.manage-field select:focus,
+.manage-field textarea:focus,
+.manage-list-head input:focus {
+  outline: none;
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+.manage-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.manage-primary,
+.manage-secondary {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.manage-primary {
+  background: #0b5ed7;
+  color: white;
+}
+
+.manage-primary:hover {
+  background: #084298;
+}
+
+.manage-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.manage-secondary {
+  background: #eef1f6;
+  color: #333;
+}
+
+.manage-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.manage-list-head h2 {
+  margin-bottom: 0;
+}
+
+.manage-list-head input {
+  max-width: 260px;
+}
+
+.manage-note {
+  color: #666;
+  padding: 12px 0;
+}
+
+.manage-error-text {
+  color: #b42318;
+  font-weight: 600;
+}
+
+.manage-table-wrap {
+  overflow-x: auto;
+}
+
+.manage-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.manage-table th,
+.manage-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 14px;
+  color: #333;
+}
+
+.manage-table th {
+  background: #f5f7fb;
+  color: #555;
+  font-size: 13px;
+}
+
+.manage-actions {
+  white-space: nowrap;
+}
+
+.manage-actions button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: 1px solid #0b5ed7;
+  border-radius: 7px;
+  background: white;
+  color: #0b5ed7;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.manage-actions button.danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.manage-actions button:hover {
+  background: #eef4ff;
+}
+
+.manage-actions button.danger:hover {
+  background: #fdecea;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-available {
+  background: #e7f6ec;
+  color: #1a7f37;
+}
+
+.badge-occupied {
+  background: #fff4d6;
+  color: #946200;
+}
+
+.badge-maintenance {
+  background: #fdecea;
+  color: #b42318;
+}
+
+@media (max-width: 900px) {
+  .manage-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .manage-page {
+    padding: 90px 14px 40px;
+  }
+
+  .manage-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-form,
+  .manage-list {
+    padding: 16px;
+  }
+}

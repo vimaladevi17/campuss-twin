@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-11-03T07:40:36.853271+00:00",
+  "reference_point": {
+    "lat": 9.5743,
+    "lon": 77.6761,
+    "radius_m": 1500,
+    "note": "Approximate extraction parameters, not an official campus boundary."
+  },
+  "all_layers_ok": true,
+  "layers": [
+    {
+      "layer": "buildings.geojson",
+      "features": 4,
+      "crs": "EPSG:4326",
+      "problems": [],
+      "bounds": [
+        77.6761,
+        9.5743,
+        77.6773,
+        9.5785
+      ]
+    },
+    {
+      "layer": "building_centroids.geojson",
+      "features": 4,
+      "crs": "EPSG:4326",
+      "problems": [],
+      "bounds": [
+        77.676125,
+        9.5744,
+        77.6772,
+        9.5784
+      ]
+    },
+    {
+      "layer": "facilities.geojson",
+      "features": 5,
+      "crs": "EPSG:4326",
+      "problems": [],
+      "bounds": [
+        77.6756,
+        9.5743,
+        77.6772,
+        9.5784
+      ]
+    },
+    {
+      "layer": "pedestrian_paths.geojson",
+      "features": 2,
+      "crs": "EPSG:4326",
+      "problems": [],
+      "bounds": [
+        77.6762,
+        9.5744,
+        77.6772,
+        9.5758
+      ]
+    },
+    {
+      "layer": "pedestrian_network.geojson",
+      "features": 2,
+      "crs": "EPSG:4326",
+      "problems": [],
+      "bounds": [
+        77.6762,
+        9.5744,
+        77.6772,
+        9.5758
+      ]
+    }
+  ],
+  "duplicates_removed": {
+    "buildings": 0,
+    "facilities": 1
+  },
+  "geometry_repairs": [
+    {
+      "osm_id": "way/4",
+      "problem": "Self-intersection[77.6762 9.5764]",
+      "action": "repaired with make_valid"
+    }
+  ],
+  "campus_boundary": "not generated: no reliable boundary data was extracted (the radius is not a boundary)",
+  "pedestrian_graph": {
+    "nodes": 3,
+    "edges": 2,
+    "components": 1
+  },
+  "building_heights": {
+    "osm": 1,
+    "estimated_from_floors": 1,
+    "unknown": 2
+  },
+  "category_counts": {
+    "academic": 2,
+    "hostel": 1,
+    "food": 1,
+    "transport": 1
+  },
+  "unconnected_building_pairs": 0
+}
